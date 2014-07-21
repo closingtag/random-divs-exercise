@@ -1,0 +1,82 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	position: relative;
+}
+
+button {
+	padding: 0;
+	border: 0;
+}
+
+button[draggable="true"] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+
+  cursor: move;
+}
+
+#add {
+	position: fixed;
+	left: 10px;
+	bottom: 10px;
+	width: 48px;
+	height: 48px;
+	background: url(document-new.png) no-repeat;
+	text-indent: -1982em;
+}
+
+.box {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	background-color: #ddd;
+	text-indent: -1982em;
+}
+
+.box .button {
+	display: block;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	width: 10px;
+	height: 10px;
+	text-indent: -1982em;
+}
+
+.box .button:focus {
+	outline: none;
+}
+
+.box .drag {
+	background: url(navigation.png) no-repeat;
+}
+
+.box .resize {
+	top: auto;
+	left: auto;
+	right: 2px;
+	bottom: 2px;
+	background: url(arrow-3-down-right.png) no-repeat;
+}
+
+.box .close {
+	left: auto;
+	right: 2px;
+	background: url(cancel.png) no-repeat;
+}
+
+.box.action .button, .box:hover .button {
+	visibility: visible;
+}

@@ -1,11 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>  
+<html lang="en" class="no-js">
 <head>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
-	<title>DIVs</title>
+  <meta charset="utf-8">
+
+  <title>Mag10 Application</title>
+  <meta name="description" content="JS App for mag10 application">
+  <meta name="author" content="Robert Weber">
+  
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
+
 <body>
+  <button id="add" title="Add new Box!">Add new Box!</button>
+  
+  <script src="js/utils.js"></script>
+  <script src="js/Box.js"></script>
+  <script>
+    if(document.getElementById('add')){
+  		addEvent(document.getElementById('add'), 'click', function(){
+  		  var body = document.getElementsByTagName('body')[0];
+  			var box = new Box(body);
+  			box.set_color();
+        box.set_coords();
+        box.create();
+  		});
+  	}
+	</script>
 </body>
 </html>
